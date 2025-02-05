@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagan Connects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jagan Connects</h1>
+    </header>
+    <main>
+        <h2>Listen to Our Message</h2>
+        <audio id="audio" src="https://github.com/204G1A0525/Party_Member/blob/main/Jagan%20Agenda%20Song.mp3"></audio>
+        <div class="controls">
+            <button onclick="playAudio()">Play</button>
+            <button onclick="pauseAudio()">Pause</button>
+            <button onclick="resumeAudio()">Resume</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 YS Congress Party, Lingareddypalli</p>
+    </footer>
+    <script>
+        var audio = document.getElementById("audio");
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        function resumeAudio() {
+            if (audio.paused) {
+                audio.play();
+            }
+        }
+
+        audio.addEventListener('play', () => {
+            document.body.classList.add('animate');
+        });
+
+        audio.addEventListener('pause', () => {
+            document.body.classList.remove('animate');
+        });
+    </script>
+</body>
+</html>
